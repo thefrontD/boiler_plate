@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   //Switch, react-router-dom 에 없다고 에러뜸
   Route,
-  Routes,
+  Routes, 
   Link
 }from "react-router-dom";
 

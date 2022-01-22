@@ -7,7 +7,7 @@ function LandingPage() {
         axios.get('/api/hello')
         .then(response => console.log(response.data))
     },[])
-    return (
+    return ( 
         <div>
             LandingPage
         </div>
