@@ -1,5 +1,5 @@
 import axios from "axios";
-import { AUTH_USER, LOGIN_USER, REGISTER_USER } from "./types";
+import { AUTH_USER, LOGIN_USER, POST_MEMO, REGISTER_USER } from "./types";
 
 export function loginUser(dataTosubmit) {
   const request = axios
@@ -19,6 +19,17 @@ export function registerUser(dataTosubmit) {
 
   return {
     type: REGISTER_USER,
+    payload: request,
+  };
+}
+
+export function postMemo(dataTosubmit) {
+  const request = axios
+    .post("/api/user/postMemo", dataTosubmit)
+    .then((response) => response.data);
+
+  return {
+    type: POST_MEMO,
     payload: request,
   };
 }

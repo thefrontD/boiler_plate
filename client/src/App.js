@@ -4,12 +4,12 @@ import {
   //Switch, react-router-dom 에 없다고 에러뜸
   Route,
   Routes,
-  Link,
 } from "react-router-dom";
 
 import LandingPage from "./components/views/LandingPage/LandingPage";
 import LoginPage from "./components/views/LoginPage/LoginPage";
 import RegisterPage from "./components/views/RegisterPage/RegisterPage";
+import EditorPage from "./components/views/EditorPage/EditorPage";
 import Auth from "./hoc/auth";
 
 function App() {
@@ -29,6 +29,7 @@ function App() {
         <Route exact path="/" element={<NewLandingPage />} />
         <Route exact path="/login" element={<NewLoginPage />} />
         <Route exact path="/register" element={<NewRegisterPage />} />
+        <Route exact path="/editor" element={<EditorPage />} />
       </Routes>
     </Router>
   );
